@@ -1,0 +1,446 @@
+@charset "utf-8";
+
+/* Importing Google Fonts */ 
+@import url('https://fonts.googleapis.com/css2?family=Miniver&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Sriracha&display=swap');
+
+:root {
+    --font-size-xl: 2.5rem;
+    --font-size-m: 1.2rem;
+    --border-radius-s: 5px;
+    --border-radius-m: 8px;
+    --border-radius-circle: 50%;
+    --secondary-color: #f3961c;
+    --light-pink-color: #faf4f5;
+    --white-color: #ffffff;
+    --font-weight-semibold: 600;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", serif;
+}
+
+body {
+    background-color: #faf4f5; /* light-pink */
+    color: #252525; /* dark */
+    font-size: 1rem;
+    font-weight: 400;
+    text-align: center;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #3b141c; /* primary */
+}
+
+p {
+    font-size: 1.12rem;
+    font-weight: 500;
+    color: #252525; /* dark */
+}
+
+.btn-primary {
+    background-color: #f3961c; /* secondary */
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-primary:hover {
+    background-color: #3b141c; /* primary */
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Stylings for whole site */
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    background: none;
+}
+
+img {
+    width: 100%;
+}
+
+.section-content {
+    margin: 0 auto;
+    padding: 0 20px;
+    max-width: var(--site-max-width);
+}
+
+.section-title {
+    text-align: center;
+    padding: 60px;
+    text-transform: uppercase;
+    font-size: var(--font-size-xl);
+} 
+
+.section-title {
+    position: relative;
+}
+.section-title ::after {
+    content: "";
+    width: 80px;
+    height: 5px;
+    display: block;
+    margin: 10px auto 0;
+    border-radius: var(--border-radius-s);
+    background: var(--secondary-color);
+}
+
+/* Logo Styling */
+.navbar .nav-logo img {
+    width: 140px; /* ubah sesuai kebutuhan, biasanya antara 100-150px */
+    height: auto;
+    object-fit: contain;
+}
+
+/* Navbar styling*/
+header {
+    background: #E5989B;
+}
+
+header .navbar {
+    display: flex;
+    padding: 10px 20px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-logo img {
+    height: 50px;
+    width: auto;
+    object-fit: contain;
+}
+
+.navbar .nav-logo .logo-text {
+    color: var(--white-color);
+    font-size: var(--font-size-xl);
+    font-weight: var(--font-weight-semibold);
+}
+
+.navbar .nav-menu {
+    display: flex;
+    gap: 10px;
+    padding: 0 60px;
+}
+
+.navbar .nav-menu .nav-link {
+    padding: 10px 18px;
+    color: var(--white-color);
+    font-size: 1.5rem;
+    font-weight: 600;
+    border-radius: var(--border-radius-m);
+    transition: 0.5s ease;
+}
+
+.navbar .nav-menu .nav-link:hover {
+    color: #B5828C;
+    background: #fff5ee;
+}
+
+/* Home Section */
+.home{
+    min-height: 90vh;
+    display: flex;
+    align-items: center;
+    background-image: url(Images/Homee.jpeg);
+    background-color: #FFCDB2;
+    background-size: cover;
+    background-position: center;
+    padding: 0 50px;
+}
+
+.home .content{
+    max-width: 40%;
+    margin-left: 50px;
+}
+
+.home .content h3 {
+    font-size: 4rem;
+    text-transform: uppercase;
+    color: #fff;
+    text-align: left;
+    margin-left: 0;
+    margin-top: -100px;
+}
+
+.home .content p {
+    font-size: 1.8em;
+    font-weight: lighter;
+    line-height: 1.8;
+    padding: 1rem 0;
+    text-align: left;
+    color: #fff;
+    margin-left: 0px;
+    margin-top: -20px;
+}
+
+.home .content-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.foto-home {
+    width: 800px;
+    height: auto;
+    object-fit: cover;
+    margin-right: -50px;
+}
+
+/* About section styling */
+.about-section {
+    padding: 120px 0;
+    margin: 10px;
+    color: #333;
+}
+
+.about-section .section-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.about-section .about-image-wrapper {
+    margin-left: 200px; /* Atau sesuaikan sendiri biar pas */
+}
+
+.about-section .about-image-wrapper .about-image {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.about-section .about-details .section-title {
+    padding: 0;   
+}
+
+.about-section .about-details {
+    max-width: 60%;
+}
+
+.about-section .about-details .text {
+    line-height: 30px;
+    margin: 50px 0 30px;
+    text-align: center;
+    font-size: var(--font-size-m);
+    color: #555;
+}
+
+:root {
+    --font-size-m: 1.1rem;
+    --border-radius-circle: 50%;
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Organization Section Styling */
+  .Organization-section {
+    padding: 50px 0 100px;
+    background-color: #FFB4A2;
+    margin-bottom: 80px;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .swiper {
+    padding: 0 40px;
+  }
+  
+  .swiper-slide {
+    background: #fff;
+    border-radius: 20px;
+    padding: 25px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  }
+  
+  .user-image {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    margin-bottom: 25px;
+    border-radius: var(--border-radius-circle);
+  }
+  
+  .name {
+    margin-bottom: 15px;
+    font-size: var(--font-size-m);
+    font-weight: bold;
+  }
+  
+  .feedback {
+    line-height: 1.6;
+    font-style: italic;
+    font-size: 0.95rem;
+  }
+  
+  /* Swiper buttons */
+  .swiper-button-next,
+  .swiper-button-prev {
+    color: #333;
+  }
+  
+  /* Pagination */
+  .swiper-pagination-bullet-active {
+    background: #000;
+  }
+  
+/* Contact Form */
+form input, form textarea, form button {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+form textarea {
+    height: 120px;
+}
+form button {
+    background: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 1.2em;
+    transition: 0.3s ease-in-out;
+}
+form button:hover {
+    background: #252525;
+}
+
+.form-and-social {
+    display: flex;
+    justify-content: center; /* Biar form & sosmed ke tengah */
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+
+#contact .section-title {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 30px;
+}
+    
+.contact-form {
+    flex: 1;
+    min-width: 300px;
+    max-width: 500px; /* Biar nggak terlalu lebar */
+    margin: 0 auto; /* Tambahan tengah */
+}
+
+.social-media {
+    flex: 1;
+    min-width: 200px;
+    margin-top: 100px;
+}
+
+.social-media h3 {
+    margin-bottom: 20px; /* jarak antara judul dan daftar akun */
+    font-size: 1.5rem; 
+    color: #333; 
+  }  
+
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #B5828C;
+    color: white;
+    margin-top: 20px;
+}
+
+.contact-container {
+    padding: 40px;
+    background-color: #f9f9f9;
+  }
+
+  .form-and-social {
+    max-width: 1000px; /* Biar nggak melebar terus */
+    margin: 0 auto; /* Posisi ke tengah */
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 50px;
+}
+  
+  .contact-form {
+    flex: 1;
+    min-width: 250px;
+  }
+  
+  .social-media {
+    flex: 1;
+    min-width: 200px;
+    margin-top: 100px;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .contact-form button {
+    padding: 10px 20px;
+    background-color: #2980b9;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .social-media a {
+    display: block;
+    margin-bottom: 10px;
+    color: #555;
+    text-decoration: none;
+  }
+  
+  .social-media a:hover {
+    color: #2980b9;
+  }
+  
+
